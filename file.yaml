@@ -1,0 +1,7 @@
+---
+- hosts: web:app
+  tasks:
+   - name: Create a file
+     file:
+      path: /home/ec2-user/vicky
+      state: touch
