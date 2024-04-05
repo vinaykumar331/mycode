@@ -1,0 +1,15 @@
+---
+  - name: playbook for installing Nginx
+    hosts: localhost
+    tasks:
+     - name: perform yum Update
+       shell: yum update -y
+
+     - name: Install Nginx using yum
+       shell: yum install -y nginx
+
+     - name: Start Nginx service
+       shell: service nginx start
+
+     - name: Enable Nginx service
+       shell: systemctl enable nginx
